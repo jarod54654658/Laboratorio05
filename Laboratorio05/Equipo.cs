@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,38 +9,55 @@ namespace Laboratorio05
 {
     public class Equipo
     {
-        public Equipo(string nombre, int partidosGanados, int partidosEmpatados, int partidosPerdidos, int golesFavor, int golesContra)
+        private string nombre;
+        private int partidosganados;
+        private int partidosempatados;
+        private int partidosperdidos;
+        private int golesfavor;
+        private int golescontra;
+
+        public Equipo(string nombre, int partidosganados, int partidosempatados, int partidosperdidos, int golesfavor, int golescontra)
         {
+            if (partidosempatados + partidosganados + partidosperdidos != 3 || golescontra < 0 || golesfavor < 0)
+                throw new Exception("Revise el equipo");
+
+            this.nombre= nombre;
+            this.partidosganados= partidosganados;
+            this.partidosempatados = partidosempatados;
+            this.partidosperdidos = partidosperdidos;
+            this.golesfavor = golesfavor;
+            this.golescontra = golescontra;
+
         }
 
         public string GetNombre()
         {
-            return "";
+            return nombre;
         }
 
         public int GetPartidosGanados()
         {
-            return 0;
+            return partidosganados;
         }
 
         public int GetPartidosEmpatados()
         {
-            return 0;
+            return partidosempatados;
         }
 
         public int GetPartidosPerdidos()
         {
-            return 0;
+            return partidosperdidos;
         }
 
         public int GetGolesFavor()
         {
-            return 0;
+            return golesfavor;
         }
 
         public int GetGolesContra()
         {
-            return 0;
+            return golescontra;
         }
     }
 }
