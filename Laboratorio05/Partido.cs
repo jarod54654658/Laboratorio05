@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -30,7 +32,7 @@ namespace Laboratorio05
             return equipo2;
         }
 
-        public Equipo SeleccionarEquipoGanador()
+        public Equipo EquipoGanador()
         {
             if (ganador !=null) 
              return ganador;
@@ -49,6 +51,7 @@ namespace Laboratorio05
                 ganador = equipo2;
 
             return ganador;
+
         }
     }
 }
