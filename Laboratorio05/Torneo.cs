@@ -29,7 +29,7 @@ namespace Laboratorio05
                 for (int i = 0; i < equiposRestantes / 2; i++)
                 {
                     Partido partido = new Partido(result[fase - 1][i], result[fase - 1][equiposRestantes - i - 1]);
-                    Equipo ganador = partido.SeleccionarEquipoGanador();
+                    Equipo ganador = partido.EquipoGanador();
                     result[fase][i] = ganador;
                 }
 
