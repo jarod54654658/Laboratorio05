@@ -33,6 +33,7 @@ namespace Laboratorio05
                     result[fase][i] = ganador;
                 }
 
+
                 equiposRestantes = equiposRestantes / 2;
 
                 fase++;
